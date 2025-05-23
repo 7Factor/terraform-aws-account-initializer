@@ -11,7 +11,7 @@ data "aws_iam_policy_document" "assume_developer" {
 
       principals {
         type        = "AWS"
-        identifiers = "arn:aws:iam::${statement.value.account_id}:root"
+        identifiers = ["arn:aws:iam::${statement.value.account_id}:root"]
       }
 
       actions = [
